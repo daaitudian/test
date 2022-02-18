@@ -1,0 +1,16 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+PROJECT(freedesktop)
+
+SET(CMAKE_INCLUDE_CURRENT_DIR ON)
+SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_BUILD_TYPE Debug)
+
+set( freedesktop_SOURCE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
+)
+
+add_executable(${PROJECT_NAME} ${freedesktop_SOURCE})
+target_link_libraries(${PROJECT_NAME} iniparser)
+
+ADD_SUBDIRECTORY(src)
